@@ -15,7 +15,7 @@ def listBlogs():
 @app.route('/')
 def hello_world():
     str1 = ''.join(listBlogs())
-    return str1
+    return render_template('home.html', blogs=str)
 
 @app.route('/blog/<blogname>')
 def make_blog(blogname):
