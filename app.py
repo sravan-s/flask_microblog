@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import glob
 import os
 
@@ -14,13 +14,13 @@ def listBlogs():
 
 @app.route('/')
 def hello_world():
-    str1 = ''.join(listBlogs())
-    return render_template('home.html', blogs=str)
+    myBlogs = listBlogs()
+    return render_template('home.html', blogs = myBlogs)
 
 @app.route('/blog/<blogname>')
 def make_blog(blogname):
     return blogname
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 

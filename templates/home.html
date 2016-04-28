@@ -1,9 +1,13 @@
-<!doctype html>
-<title>Welcome to microblog</title>
-{% if name %}
-  <ul>Hello {{ blogs }}!</ul>
-{% else %}
-  <h1>No blogs!!</h1>
-{% endif %}
-
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blogs Home</title>
+    </head>
+    <body>
+        <ul>
+        {% for blog in blogs %}
+          <li>{{ blog }}</li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
