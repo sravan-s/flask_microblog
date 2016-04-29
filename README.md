@@ -19,4 +19,4 @@
 
 ####Place your markups in 'blogs' folder.
 
-####Run `python3 app.js`
+####Run `python3 app.py`
