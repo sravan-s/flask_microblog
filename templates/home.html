@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Blogs Home</title>
     </head>
     <body>
         <ul>
         {% for blog in blogs %}
-          <li>{{ blog }}</li>
+          <li>
+              <a href="/blog/{{ blog }}">{{ blog }}</a>
+          </li>
         {% endfor %}
         </ul>
     </body>
