@@ -8,7 +8,7 @@ cwd = os.path.dirname(os.path.abspath(__file__))
 blogsFolder = cwd + "/blogs/"
 
 # Lists blogs in folder blogs/
-# Blohs must have extenstion .md
+# Blogs should be in markdown and have an extenstion '.md'`
 def listBlogs():
     blogs = []
     for file in os.listdir( cwd + "/blogs"):
